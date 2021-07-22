@@ -1,0 +1,49 @@
+<div class="home" ng-init="vm.init()">
+  <label alt="Clientes cadastrados" for="Clientes-cadastrados"></label>
+  <h1 name="Clientes-cadastrados">Clientes cadastrados:</h1>
+  <div class="float-right pull-right"></div>
+    <input
+    id="search"
+    class="form-control mr-sm-2 input-search col-md-4 float-left"
+    type="search"
+    placeholder="Buscar"
+    aria-label="Search"
+    ng-model="vm.filter"
+    />
+    <button type="button" class="btn btn-primary" ng-click="vm.listarClientes()">Listar</button>
+  </div>
+  <br>
+  <div class="table-responsive">
+    <table id="table-cadastro" class="table caption-top table-striped table-hover justify-content-between" ng-if="vm.clientes">
+        <caption>Lista de Clientes</caption>
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">CPF</th>
+            <th scope="col">RG</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Excluir</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="cliente in vm.clientes | filter : vm.filter">
+            <th scope="row">{{cliente.id}}</th>
+            <td>{{cliente.nome}}</td>
+            <td>{{cliente.cpf}}</td>
+            <td>{{cliente.rg}}</td>
+            <td>{{cliente.tel}}</td>
+            <td>{{cliente.email}}</td>
+            <td><button type="button" ng-click="vm.editar(cliente.id)" name="alterar" id="alterar" class="btn btn-warning">Editar</button></td>
+            <td>
+              <button type="button" ng-click="vm.excluir(cliente.id, cliente.nome)" name="alterar" id="alterar" class="btn btn-danger">
+                Excluir
+              </button>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+</div>  

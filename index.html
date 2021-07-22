@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="app">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AngularJS</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="resources/css/style.css" />
+
+    <script>
+    </script>
+
+    <!-- Injeção de dependências do bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Injeção de dependências do angular.js -->
+    <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="./node_modules/angular-route/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- Injeção de dependências do app -->
+    <script src="curso-app.js"></script>
+    <script src="curso.router.js"></script>
+    <script src="home/home-controller.js"></script>
+    <script src="cadastro/cadastro-controller.js"></script>
+    <script src="navigation/navigationController.js"></script>
+    <script src="curso-service.js"></script>
+    <script src="resources/js/script.js"></script>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+      ng-controller="navigationController as vm"
+    >
+      <a class="navbar-brand">Angular JS</a>
+      <button
+        class="navbar-toggler"
+        data-target="#my-nav"
+        data-toggle="collapse"
+        aria-controls="my-nav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="my-nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" ng-repeat="tab in vm.tabsNavigation">
+            <a
+              ng-class="tab.class"
+              ng-click="vm.navegar(tab.title, vm.tabsNavigation)"
+              >{{ tab.title }}</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container body-content justify-content-center" ng-view></div>
+  </body>
+</html>

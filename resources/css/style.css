@@ -1,0 +1,28 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+div.body-content {
+    padding-bottom: 150px;
+}
+
+ul.navbar-nav li.nav-item:hover {
+    cursor: pointer;
+}
+
+button.btn-form {
+    margin-top: 30px;
+}
+
+nav.navbar {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+div.cadastro {
+    padding-top: 10%;
+}
+
+div.home {
+    padding-top: 7.8%;
+}

@@ -1,0 +1,136 @@
+<div class="cadastro">
+  <h1>{{ vm.title }}</h1>
+  <form for="cadastroForm" name="cadastro" ng-submit="onSubmit()" method="post">
+    <div class="form-floating">
+      <br />
+      <label>{{vm.message}}</label>
+      <br />
+    </div>
+    <table class="table">
+      <tbody>
+        <tr>
+          <td scope="row">
+            <div class="form-group">
+              <label for="id">Id:</label>
+              <input
+                type="text"
+                value="vm.cliente.id"
+                ng-model="vm.cliente.id"
+                name="id"
+                id="id"
+                class="form-control"
+                disabled
+              />
+            </div>
+          </td>
+          <td>
+            <div class="form-group">
+              <label for="nome">Nome:</label>
+              <input
+                type="text"
+                ng-model="vm.cliente.nome"
+                name="nome"
+                id="nome"
+                class="form-control"
+                maxlength="40"
+                placeholder="Digite o nome"
+                required
+              />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td scope="row">
+            <div class="form-group">
+              <label for="cpf">CPF:</label>
+              <input
+                type="text"
+                ng-model="vm.cliente.cpf"
+                name="cpf"
+                id="cpf"
+                class="form-control"
+                ui-mask="999.999.999-99"
+                placeholder="000.000.000-00"
+                required
+              />
+            </div>
+          </td>
+          <td>
+            <div class="form-group">
+              <label for="rg">RG:</label>
+              <input
+                type="text"
+                ng-model="vm.cliente.rg"
+                name="rg"
+                id="rg"
+                class="form-control"
+                maxlength="15"
+                ui.mask="ZZ-999999999999"
+                placeholder="UF-999999999999"
+                required
+              />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="form-group">
+              <label for="tel">Telefone:</label>
+              <input
+                type="tel"
+                ng-model="vm.cliente.tel"
+                name="tel"
+                id="tel"
+                class="form-control"
+                ui-mask="(99) 99999-9999"
+                placeholder="(00) 00000-0000"
+                required
+              />
+            </div>
+          </td>
+          <td>
+            <div class="form-group">
+              <label for="email">E-mail:</label>
+              <input
+                type="email"
+                ng-model="vm.cliente.email"
+                name="email"
+                id="email"
+                class="form-control"
+                placeholder="usuario@dominio.com"
+                required
+              />
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="btn-first float-left">
+      <button
+        type="button"
+        class="btn btn-secondary btn-form"
+        ng-click="vm.limparCampos()"
+      >
+        Limpar
+      </button>
+    </div>
+    <div class="float-right">
+      <button
+        type="button"
+        class="btn btn-danger btn-form"
+        ng-click="vm.cancelarCadastro()"
+      >
+        Cancelar
+      </button>
+      <button
+        name="cadastro"
+        type="submit"
+        class="btn btn-success btn-form"
+        ng-click="vm.cadastrarClientes(vm.cliente.nome)"
+      >
+        {{ vm.textButton }}
+      </button>
+    </div>
+  </form>
+</div>

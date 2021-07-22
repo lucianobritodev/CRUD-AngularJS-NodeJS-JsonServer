@@ -1,0 +1,44 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "nome": "Pablo Fernando",
+      "cpf": "12512545877",
+      "rg": "GO-6985478",
+      "tel": "61258456362",
+      "email": "ricardo@email.com"
+    },
+    {
+      "id": 2,
+      "nome": "Carlos Eduardo",
+      "cpf": "12512545875",
+      "rg": "MG-6985478",
+      "tel": "61258456362",
+      "email": "carlos@email.com"
+    },
+    {
+      "id": 3,
+      "nome": "João Marques",
+      "cpf": "12512545877",
+      "rg": "PB-6985478",
+      "tel": "61258456362",
+      "email": "joao.marques@email.com"
+    },
+    {
+      "id": 4,
+      "nome": "Luciano Brito",
+      "cpf": "12512545877",
+      "rg": "GO-1234567",
+      "tel": "61996787597",
+      "email": "lucianobrito.dev@gmail.com"
+    },
+    {
+      "nome": "Priscila Amaral Ferreira",
+      "cpf": "36521452111",
+      "rg": "GR-95854628",
+      "id": 5,
+      "tel": "61258456362",
+      "email": "pri.amaral@gmail.com"
+    }
+  ]
+}
