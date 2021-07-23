@@ -3,6 +3,8 @@
 
 ![](/assets/screenshot.png)
 
+![](/assets/screenshot2.png)
+
 ## Descrição
 
 Esta aplicação se resume a um CRUD (Create, Read, Update and Delete)  criado em AngularJS, NodeJS e JSON-Server (para simular um servidor de banco de dados respondendo na porta 3000) durante o Hackathon Stefanini 2021.
